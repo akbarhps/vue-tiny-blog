@@ -62,8 +62,8 @@ button {
   display: block;
   color: white;
   cursor: pointer;
-  margin-top: 30px;
-  padding: 8px 16px;
+  margin: 30px auto;
+  padding: 14px 30px;
   border-radius: 32px;
   background: black;
 }
