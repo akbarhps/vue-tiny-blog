@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import PostDetails from '../views/PostDetails.vue'
 import CreatePost from '../views/CreatePost.vue'
 import PostsByTag from '../views/PostsByTag.vue'
+import NotFound from '../views/NotFound.vue'
 
 const routes = [
   {
@@ -26,6 +27,11 @@ const routes = [
     name: 'PostsByTag',
     component: PostsByTag,
   },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: NotFound,
+  }
 ]
 
 const router = createRouter({
