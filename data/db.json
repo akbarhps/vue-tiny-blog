@@ -1,0 +1,19 @@
+{
+  "blogs": [
+    {
+      "author": "akbar",
+      "title": "Post pertamaku",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dolor quas quidem incidunt mollitia fugit explicabo facilis, accusantium et debitis tenetur culpa eligendi praesentium neque, dolorum possimus officiis iste, omnis provident quos quia odit unde odio? Consectetur reiciendis maxime excepturi debitis atque soluta quam sunt accusantium! Nisi doloribus sequi culpa.",
+      "tags": [
+        "fresh",
+        "post",
+        "git",
+        "vue",
+        "js",
+        "github"
+      ],
+      "timestamp": 1611484244840,
+      "id": 1
+    }
+  ]
+}

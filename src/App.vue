@@ -18,5 +18,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
+
+.screen-layout {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+}
 </style>
 © 2021 GitHub, Inc.

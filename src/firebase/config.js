@@ -3,6 +3,7 @@ import 'firebase/firestore'
 
 var firebaseConfig = {
   // paste your firebase config here
+  // you need to enable firestore
 };
 
 // init firebase
@@ -12,5 +13,4 @@ firebase.initializeApp(firebaseConfig)
 const projectFirestore = firebase.firestore()
 const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 
-// export firestore
 export { projectFirestore, timestamp }

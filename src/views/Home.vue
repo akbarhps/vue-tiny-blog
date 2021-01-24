@@ -1,41 +1,32 @@
 <template>
-  <div class="home">
-    <div v-if="error">{{ error }}</div>
+  <div class="screen-layout">
     <div v-if="posts.length" class="layout">
       <PostList :posts="posts" />
-      <TagCloud :posts="posts" />
+      <TagTable :posts="posts" />
     </div>
-    <div v-else>
-      <Spinner />
-    </div>
+    <div v-else-if="error">{{ error }}</div>
+    <div v-else><ProgressBar /></div>
   </div>
 </template>
 
 <script>
-import fetchPosts from "../composables/fetchPosts";
-
-// component imports
+import fetchPost from "../composables/fetchPost";
 import PostList from "../components/PostList.vue";
-import Spinner from "../components/Spinner.vue";
-import TagCloud from "../components/TagCloud.vue";
+import TagTable from "../components/TagTable.vue";
+import ProgressBar from "../components/ProgressBar.vue";
 
 export default {
-  components: { PostList, Spinner, TagCloud },
+  components: { PostList, ProgressBar, TagTable },
   setup() {
-    const { posts, error, loadPosts } = fetchPosts();
-    loadPosts();
+    const { posts, error, getAllPost } = fetchPost();
 
+    getAllPost();
     return { posts, error };
   },
 };
 </script>
 
 <style>
-.home {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px;
-}
 .layout {
   display: grid;
   grid-template-columns: 3fr 1fr;

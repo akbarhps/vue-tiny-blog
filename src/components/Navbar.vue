@@ -1,11 +1,9 @@
 <template>
   <header>
-    <router-link :to="{ name: 'Home' }">
-      <h1>Tiny Blog</h1>
-    </router-link>
+    <h1>Tiny Blog</h1>
     <nav>
       <router-link :to="{ name: 'Home' }">Home</router-link>
-      <router-link :to="{ name: 'Create' }">Create Post</router-link>
+      <router-link :to="{ name: 'CreatePost' }">Create Post</router-link>
     </nav>
   </header>
 </template>
@@ -19,19 +17,25 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 10px;
 }
+
 header h1 {
   color: #444444;
-  font-size: 48px;
+  font-size: 2rem;
+  color: white;
+  padding: 6px;
+  background: black;
 }
+
 header a {
   color: #bbb;
   text-decoration: none;
   margin-left: 20px;
 }
+
 header a.router-link-active {
   color: #444;
   font-weight: bold;
